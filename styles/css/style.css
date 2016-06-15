@@ -1,0 +1,131 @@
+@import 'https://fonts.googleapis.com/css?family=Jaldi:400,700|Yantramanav:100,300,400';
+body {
+  font-family: "Jaldi", sans-serif;
+  color: #eee;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; }
+
+.filter {
+  position: fixed;
+  background: url("https://images.unsplash.com/photo-1458724029936-2cc6ee38f5ef?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1cf1a3e7ee550644d99b4b5bec53ede9");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 110vw;
+  height: 110vh;
+  top: -5vh;
+  left: -5vw;
+  opacity: 1; }
+
+.header {
+  position: relative;
+  text-align: center;
+  width: 475px;
+  margin: 10% auto 10px;
+  border: 4px white solid;
+  border-radius: 0px;
+  opacity: 1; }
+  .header h1 {
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 100;
+    font-size: 200px;
+    margin: -40px 0 -50px 0; }
+
+@media screen and (max-width: 450px) {
+  .header {
+    width: 300px; }
+    .header h1 {
+      font-size: 100px;
+      margin: 0; } }
+
+.doneClass {
+  color: rgba(183, 195, 181, 0.75); }
+
+.todoUl {
+  position: relative;
+  text-align: center;
+  padding: 20px 50px;
+  border-radius: 10px; }
+
+#todoForm li {
+  cursor: pointer;
+  text-transform: uppercase; }
+
+input[type=text] {
+  color: #eee;
+  width: 215px;
+  height: 40px;
+  box-sizing: 30px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.33);
+  border: none;
+  border-radius: 5px 0 0 5px;
+  box-sizing: border-box;
+  padding: 5px 10px; }
+
+.submitBtn {
+  font-size: 18px;
+  color: #eee;
+  background: rgba(255, 255, 255, 0.33);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  box-sizing: border-box;
+  height: 40px;
+  width: 80px;
+  padding-right: 15px; }
+
+form {
+  width: 300px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 10px auto; }
+
+input[type=text]:focus, .submitBtn:focus {
+  border: none;
+  outline: none; }
+
+.submitBtn:focus, .submitBtn:hover {
+  color: #ccc; }
+
+.submitBtn:hover {
+  cursor: pointer; }
+
+.removeSpan, .clearSpan, .countSpan {
+  font-size: 12px;
+  color: #eee;
+  margin: 5px 0 10px 0;
+  transition: .5s all ease; }
+  .removeSpan:hover, .clearSpan:hover, .countSpan:hover {
+    color: #ddd;
+    cursor: pointer; }
+
+.clearSpan, .countSpan {
+  margin-left: 50px; }
+
+.formContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 10%; }
+
+li {
+  display: block;
+  list-style-type: none;
+  list-style: none;
+  transition: .1s all ease; }

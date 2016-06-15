@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>webpacking</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.5/angular-route.js"></script>
+        <script src="js/bundle.js"></script>
+        <link rel="stylesheet" href="styles/css/style.css">
+    </head>
+    <body>
+        <div class="filter"></div>
+        <div class="header">
+            <h1>T_D_!</h1>
+        </div>
+        <div class="todoContainer" ng-controller="MyController as ctrl">
+
+            <ul id="todoForm" class="todoUl">
+
+                <li  ng-repeat="todo in ctrl.todos" ng-class="todo.done === true ? 'doneClass' : 'notDoneClass'" ng-click="ctrl.toggleDone(todo)">
+                    <!--<input type="checkbox" ng-model="todo.done">-->{{ todo.name }}
+                </li>
+
+            </ul>
+            <div class="formContainer">
+                <form ng-submit="ctrl.addTodos()">
+                    <input type="text" ng-model="todoInput">
+                    <button class="submitBtn" type="submit" name="name" value="submit">legg til</button>
+                    <span class="removeSpan" ng-click="ctrl.deleteDone()">Slett utførte</span>
+                    <span class="clearSpan" ng-click="ctrl.deleteAll()">Slett alle</span>
+
+
+                    <span class="countSpan" ng-if="ctrl.todos.length > 0">
+                        {{ ctrl.countDone() }} / {{ ctrl.todos.length}}</span>
+                </form>
+
+
+            </div>
+        </div>
+    </body>
+</html>
